@@ -1,0 +1,249 @@
+body {
+    color: #404040;
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+	
+#full-screen {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0; 
+	background: rgba(0,0,0,1);
+	color: white;
+	z-index: 3;
+}
+
+#full-screen h4 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	margin: 0 15vw;
+	line-height: 1.5;
+}
+
+#full-screen button {
+	margin-top: 60px;
+	border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    background-color:white;
+    color: black;
+    /* border: 1px solid #e7e7e7; */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	font-size: 16px;
+}
+
+#full-screen button:hover {
+	background-color: #808080;
+	color: white;
+}
+
+.flex-container-center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center; 
+}
+
+.sidebar {
+    position: absolute;
+    width: 25%;
+    height: 95%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-right: 1px solid rgba(0, 0, 0, 0.25);
+	background-color: #1c1c1c;
+	padding-left: 30px;
+}
+
+.map {
+    position: absolute;
+    left: 25%;
+    width: 75%;
+    top: 0;
+    bottom: 0;
+}
+
+h1 {
+    font-family: 'Merriweather Sans', sans-serif;
+	font-size: 44px;
+    margin: 0;
+    font-weight: 400;
+    padding: 50px 10px 50px 10px;
+}
+
+a {
+    color: #404040;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #101010;
+}
+
+.heading {
+    background: #fff;
+    border-bottom:2px solid #eee;
+    min-height: 60px;
+    line-height: 60px;
+    padding: 0px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.listings {
+    overflow: auto;
+    padding-bottom: 60px;
+}
+
+.listings .item {
+    display: block;
+    border-bottom: 0.5px solid #818181;
+    padding: 20px 20px 20px 0;
+    text-decoration: none;
+}
+
+.listings .item .title {
+    display: block;
+    color: #d8d8d8;
+    font-weight: 400;
+	font-size: 20px;
+	padding: 0 0 0 10px;
+}
+
+.listings .item.active .title,
+.listings .item:hover {
+    color: #272727;
+}
+
+.listings .item.active {
+    background-color: #FFD900;
+	color: #0b0b0b;
+}
+   
+.about {
+	width: 25%;
+	height: 5%;
+	background-color: #1c1c1c;
+	position: absolute;
+    bottom: 0;
+}
+
+.about>a {
+	font-size: 18px;
+	color: #fff;
+	position: relative;
+	padding: 0 0 0 40px;
+}
+
+.about>a:hover {
+	text-decoration: underline;
+	color: #ffd900;
+}
+
+#popup {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	left: 20px; 
+	background: rgba(0,0,0,.9);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 3;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#popup.active {
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+#popup p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	padding: 0 10%;
+	line-height: 130%;
+}
+
+#popup a {
+	margin-top: 60px;
+	border: none;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color:white;
+    color: black;
+    /* border: 1px solid #e7e7e7; */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+	font-size: 16px;
+}
+
+.marker {
+    border: none;
+    cursor: pointer;
+    height: 47px;
+    width: 47px;
+    background-image: url(../img/marker%20_%201x.png);
+}
+
+.mapboxgl-popup {
+    padding-bottom: 50px;
+}
+
+.mapboxgl-popup-close-button {
+    display: none;
+}
+.mapboxgl-popup-content {
+    font: 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    width: 340px;
+}
+.mapboxgl-popup-content h3 {
+    background: #1d1d1d;
+    color: #ffffff;
+    font-size: 24px;
+	margin: 0;
+    padding: 20px;
+	font-weight: 700;
+    border-radius: 3px 3px 0 0;
+}
+
+.mapboxgl-popup-content h4 {
+    background: #ffffff;
+	font-size: 18px;
+	margin: 0;
+    padding: 20px;
+    font-weight: 400;
+}
+
+.mapboxgl-popup-content audio {
+	height: 40px;
+	width: 300px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.mapboxgl-popup-content a:hover {
+	text-decoration: underline;
+}

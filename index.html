@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Listen to Social Media</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+  </head>
+  
+   
+  <body>
+  	<div id="full-screen" class="flex-container-center">
+		<h4>I acknowledge the Traditional Owners and Custodians of the land, the Wurundjeri and Boonwurrung people of the Kulin nation. I recognize their continuing connection to the land and waters, and thank them for protecting the land since time immemorial.  I respect all Wurundjeri and Boonwurrung Elders and Ancestors, and any First Nations people here today.</h4>
+		<button onclick="closePopup()">Continue</button>	
+	</div>
+   
+    <div class="sidebar">
+      <div class="heading">
+        <h1>Listen to Social Media</h1>
+      </div>
+      <div id="listings" class="listings">
+      </div>
+    </div>
+    
+
+    <div class="about">
+    	<a href="#" onclick="toggle()">About this website</a>
+    </div>
+    
+    <div id="popup">
+    	<p> While I am continuously exploring the Yarra River, I'm also curious to know how other people express their thoughts and relationship with this land. Social media could be an interesting "place" to look at. <br /> <br />
+		
+		Start with some interesting Instagram posts, I use publicly available geolocation tags from the posts to identify the estimated locations in the real world and visit those places to make sound recording. Compared with the image in the original post, sound reveals more information about the place, examining the relationship between the individual and the physical location from a different perspective. The use of digital map also provides a sense of exploration. <br /> <br />
+
+		A big "Thanks" to @4tanutgal @hannahsofiaa @click.saidrose @famymojo @m_scott for their inspiring posts. </p>
+    	<a href="#" onclick="toggle()">Close</a>
+    </div>
+    
+    <div id="map" class="map"></div>
+
+  </body>
+  
+  <script src="js/script.js"></script>
+  <script>
+	function closePopup() {
+  	document.getElementById("full-screen").style.display = "none";	
+	if (document.getElementById("full-screen").style.display = "none") {
+		$(".masonry").removeAttr("style");
+	}
+	}</script>
+
+</html>
+
